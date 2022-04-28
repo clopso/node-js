@@ -15,6 +15,12 @@ server.get('/', (req, res) =>{
     res.status(200).send(nomes)
 })
 
+server.get('/:id', (req, res) =>{
+    const id = req.params.id
+    const nomesObj = nomes.filter(nome => nome.id == id)
+    res.status(200).send(nomesObj)
+})
+
 server.post('/', (req, res) =>{
     const request = req.body
 
@@ -29,6 +35,14 @@ server.post('/', (req, res) =>{
 
 server.delete('/', (req, res) => {
     nomes = [];
+    res.status(202).send()
+})
+
+server.delete('/:id', (req, res) => {
+    const id = req.params.id
+
+    listaFiltrada = nomes.filter(nome => nome.id != id)
+    nomes = listaFiltrada
     res.status(202).send()
 })
 
