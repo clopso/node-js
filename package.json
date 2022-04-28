@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "aula de node JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clopso/node-js.git"
+  },
+  "author": "caio",
+  "license": "podepassar",
+  "bugs": {
+    "url": "https://github.com/clopso/node-js/issues"
+  },
+  "homepage": "https://github.com/clopso/node-js#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.0"
+  }
+}
